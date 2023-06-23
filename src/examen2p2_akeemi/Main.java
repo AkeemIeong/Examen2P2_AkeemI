@@ -67,7 +67,21 @@ public class Main extends javax.swing.JFrame {
         genero = new javax.swing.JTextField();
         jButton11 = new javax.swing.JButton();
         ElimTec = new javax.swing.JDialog();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        eliminartec = new javax.swing.JComboBox<>();
+        jButton14 = new javax.swing.JButton();
         ModificarTec = new javax.swing.JDialog();
+        jPanel5 = new javax.swing.JPanel();
+        modtecnico = new javax.swing.JComboBox<>();
+        jButton13 = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        modname = new javax.swing.JTextField();
+        modedad = new javax.swing.JTextField();
+        modgenero = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
         CrearParte = new javax.swing.JDialog();
         jPanel3 = new javax.swing.JPanel();
         RamODisco = new javax.swing.JRadioButton();
@@ -421,26 +435,156 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jPanel6.setBackground(new java.awt.Color(153, 255, 153));
+
+        jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel35.setText("Eliminar Tecnico");
+
+        jButton14.setText("Eliminar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel35))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(eliminartec, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(eliminartec, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout ElimTecLayout = new javax.swing.GroupLayout(ElimTec.getContentPane());
         ElimTec.getContentPane().setLayout(ElimTecLayout);
         ElimTecLayout.setHorizontalGroup(
             ElimTecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         ElimTecLayout.setVerticalGroup(
             ElimTecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel5.setBackground(new java.awt.Color(0, 204, 204));
+
+        jButton13.setText("modificar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel31.setText("Nombre");
+
+        jLabel32.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel32.setText("Edad");
+
+        jLabel33.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel33.setText("Genero");
+
+        modname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modnameActionPerformed(evt);
+            }
+        });
+
+        modedad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modedadActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel34.setText("Modificar Tecnico");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(modedad, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                    .addComponent(modname)
+                    .addComponent(modgenero, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE))
+                .addGap(82, 82, 82)
+                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(232, 232, 232)
+                .addComponent(jLabel34)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(modtecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(191, 191, 191))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(modtecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(modname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel32)
+                            .addComponent(modedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel33)
+                            .addComponent(modgenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout ModificarTecLayout = new javax.swing.GroupLayout(ModificarTec.getContentPane());
         ModificarTec.getContentPane().setLayout(ModificarTecLayout);
         ModificarTecLayout.setHorizontalGroup(
             ModificarTecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         ModificarTecLayout.setVerticalGroup(
             ModificarTecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 153));
@@ -678,7 +822,6 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(RamODisco)
-                                .addGap(18, 18, 18)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel13)
@@ -718,7 +861,6 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel3Layout.createSequentialGroup()
                             .addComponent(Pantalla)
-                            .addGap(18, 18, 18)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel3Layout.createSequentialGroup()
                                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1023,18 +1165,33 @@ public class Main extends javax.swing.JFrame {
             String b=marcaD.getText();
             int c=Integer.parseInt(tiempo.getText());
             componentes.add(new DiscoDuro(a, b, c));
+            DiscoDuro p=new DiscoDuro(a, b, c);
+            adminPieza ap = new adminPieza("./parte.segs");
+            ap.cargararchivo();
+            ap.setParte(p);
+            ap.escribirArchivo();
         }
          if(Batery.isSelected()){
             int a=Integer.parseInt(horas.getText());
             String b=MaterialB.getText();
             int c=Integer.parseInt(tiempo.getText());
             componentes.add(new Bateria(a, b, c));
+            Bateria p=new Bateria(a, b, c);
+            adminPieza ap = new adminPieza("./parte.segs");
+            ap.cargararchivo();
+            ap.setParte(p);
+            ap.escribirArchivo();
         }
          if(Teclado.isSelected()){
             String a=materialT.getText();
             Color b=color.getBackground();
             int c=Integer.parseInt(tiempo.getText());
             componentes.add(new Teclado(a, b, c));
+            Teclado p=new Teclado(a, b, c);
+            adminPieza ap = new adminPieza("./parte.segs");
+            ap.cargararchivo();
+            ap.setParte(p);
+            ap.escribirArchivo();
         }
          if(Pantalla.isSelected()){
             String a=(String)tactil.getSelectedItem();
@@ -1047,14 +1204,34 @@ public class Main extends javax.swing.JFrame {
             String b=marcaP.getText();
             int c=Integer.parseInt(tiempo.getText());
             componentes.add(new Pantalla(a1, b, c));
+            Pantalla p=new Pantalla (a1, b, c);
+            adminPieza ap = new adminPieza("./parte.segs");
+            ap.cargararchivo();
+            ap.setParte(p);
+            ap.escribirArchivo();
         }
         if(Procesador.isSelected()){
             int a=Integer.parseInt(numnucleos.getText());
             String b=velocidad.getText();
             int c=Integer.parseInt(tiempo.getText());
             componentes.add(new Procesador(a, b, c));
+            Procesador p=new Procesador(a, b, c);
+            adminPieza ap = new adminPieza("./parte.segs");
+            ap.cargararchivo();
+            ap.setParte(p);
+            ap.escribirArchivo();
         }
-        
+        tamanoP.setText("");
+        marcaP.setText("");
+        horas.setText("");
+        MaterialB.setText("");
+        materialT.setText("");
+        color.setText("");
+        tipo.setText("");
+        numnucleos.setText("");
+        velocidad.setText("");
+        tamanoD.setText("");
+        marcaD.setText("");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void DiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiscoActionPerformed
@@ -1115,6 +1292,9 @@ public class Main extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ModificarCompu.pack();
         ModificarCompu.setVisible(true);
+        for (Tecnicos a : tecnicos) {
+            modtecnico.addItem(a.getNombre());
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1124,6 +1304,9 @@ public class Main extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         ModificarTec.pack();
         ModificarTec.setVisible(true);
+        for (Tecnicos a : tecnicos) {
+            modtecnico.addItem(a.getNombre());
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
@@ -1178,6 +1361,7 @@ public class Main extends javax.swing.JFrame {
         }
         compus.add(new Computadora(numeroserie.getText(),Integer.parseInt(ano.getText()),jButton12.getBackground(), material.getText()
                 , r, disco, bateria, teclado, pantalla, procesador));
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -1188,6 +1372,32 @@ public class Main extends javax.swing.JFrame {
     private void bateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bateriaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bateriaActionPerformed
+
+    private void modedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modedadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modedadActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        tecnicos.get(modtecnico.getSelectedIndex()).setEdad(Integer.parseInt(modedad.getText()));
+        tecnicos.get(modtecnico.getSelectedIndex()).setGenero(modgenero.getText());
+        tecnicos.get(modtecnico.getSelectedIndex()).setNombre(modname.getText());
+        modedad.setText("");
+        modgenero.setText("");
+        modname.setText("");
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void modnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modnameActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        for (int i = 0; i < tecnicos.size(); i++) {
+            if(eliminartec.getSelectedIndex()==i){
+                tecnicos.remove(i);
+            }
+        }
+
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1248,12 +1458,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton color;
     private javax.swing.JComboBox<String> dico;
     private javax.swing.JTextField edad;
+    private javax.swing.JComboBox<String> eliminartec;
     private javax.swing.JTextField genero;
     private javax.swing.JTextField horas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1286,6 +1499,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1296,12 +1514,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField marcaD;
     private javax.swing.JTextField marcaP;
     private javax.swing.JTextField material;
     private javax.swing.JTextField materialT;
+    private javax.swing.JTextField modedad;
+    private javax.swing.JTextField modgenero;
+    private javax.swing.JTextField modname;
+    private javax.swing.JComboBox<String> modtecnico;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField numeroserie;
     private javax.swing.JTextField numnucleos;
