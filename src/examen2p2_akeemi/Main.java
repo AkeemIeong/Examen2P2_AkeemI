@@ -1012,7 +1012,11 @@ public class Main extends javax.swing.JFrame {
             String b=marcaP.getText();
             int c=Integer.parseInt(tiempo.getText());
             componentes.add(new Ram(a, b, c));
-            
+            Ram p=new Ram(a, b, c);
+            adminPieza ap = new adminPieza("./parte.segs");
+            ap.cargararchivo();
+            ap.setParte(p);
+            ap.escribirArchivo();
         }
          if(Disco.isSelected()){
             int a=Integer.parseInt(tamanoD.getText());
@@ -1050,6 +1054,7 @@ public class Main extends javax.swing.JFrame {
             int c=Integer.parseInt(tiempo.getText());
             componentes.add(new Procesador(a, b, c));
         }
+        
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void DiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiscoActionPerformed
