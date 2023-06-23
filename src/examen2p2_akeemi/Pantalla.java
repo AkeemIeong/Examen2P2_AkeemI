@@ -8,6 +8,45 @@ package examen2p2_akeemi;
  *
  * @author SURFACEB2I7
  */
-public class Pantalla {
+public class Pantalla extends Parte{
+    private boolean tactil;
+    private String tipo;
+
+    public Pantalla() {
+        super();
+    }
+
+    public Pantalla(boolean tactil, String tipo) {
+        this.tactil = tactil;
+        this.tipo = tipo;
+    }
+
+    public Pantalla(boolean tactil, String tipo, int tiempo) {
+        super(tiempo);
+        this.tactil = tactil;
+        this.tipo = tipo;
+    }
+
+    public boolean isTactil() {
+        return tactil;
+    }
+
+    public void setTactil(boolean tactil) {
+        this.tactil = tactil;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    @Override
+    public String toString() {
+        return "Pantalla{" + "tactil=" + tactil + ", tipo=" + tipo + '}';
+    }
+    
     
 }
