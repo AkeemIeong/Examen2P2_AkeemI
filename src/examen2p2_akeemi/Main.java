@@ -1478,7 +1478,12 @@ public class Main extends javax.swing.JFrame {
                         barra.setValue(barra.getValue()+1);
                 if(barra.getValue()==100){
                     meto.stop();
-                }                
+                }
+                        try {
+                            Thread.sleep(1);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                        }
             }
                 }
             });
@@ -1584,7 +1589,7 @@ public class Main extends javax.swing.JFrame {
     ArrayList<Computadora>compus=new ArrayList<>();
     ArrayList<Tecnicos>tecnicos=new ArrayList<>();
     ArrayList<Parte>componentes=new ArrayList<>();
-    Random ran;
+    Random ran=new Random();
     Thread meto;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Batery;
