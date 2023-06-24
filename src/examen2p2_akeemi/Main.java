@@ -7,6 +7,8 @@ package examen2p2_akeemi;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
 
@@ -1473,8 +1475,11 @@ public class Main extends javax.swing.JFrame {
                 @Override
                 public void run() {
                     while(true){
-                        
-                    }
+                        barra.setValue(barra.getValue()+1);
+                if(barra.getValue()==100){
+                    meto.stop();
+                }                
+            }
                 }
             });
         
@@ -1498,23 +1503,45 @@ public class Main extends javax.swing.JFrame {
                 timet+=com.getRam().getTiempo();
                 timet+=com.getTeclado().getTiempo();
                 meto.start();
+                JOptionPane.showMessageDialog(this,"se realizo");
             }else
                 JOptionPane.showMessageDialog(this, "No se realizo");
         }
         if(tec.getExito()>=6&&tec.getExito()<=15){
             if(num!=2|num!=9){
-                
+                timet+=com.getBateria().getTiempo();
+                timet+=com.getDisco().getTiempo();
+                timet+=com.getPantalla().getTiempo();
+                timet+=com.getProcesador().getTiempo();
+                timet+=com.getRam().getTiempo();
+                timet+=com.getTeclado().getTiempo();
+                meto.start();
+                JOptionPane.showMessageDialog(this,"se realizo");
             }else
                 JOptionPane.showMessageDialog(this, "No se realizo");
         }
         if(tec.getExito()>=16&&tec.getExito()<=30){
             if(num!=1||num!=6){
-                
+                timet+=com.getBateria().getTiempo();
+                timet+=com.getDisco().getTiempo();
+                timet+=com.getPantalla().getTiempo();
+                timet+=com.getProcesador().getTiempo();
+                timet+=com.getRam().getTiempo();
+                timet+=com.getTeclado().getTiempo();
+                meto.start();
+                JOptionPane.showMessageDialog(this,"se realizo");
             }
         }
         if(tec.getExito()>30){
             if(num!=6){
-                
+                timet+=com.getBateria().getTiempo();
+                timet+=com.getDisco().getTiempo();
+                timet+=com.getPantalla().getTiempo();
+                timet+=com.getProcesador().getTiempo();
+                timet+=com.getRam().getTiempo();
+                timet+=com.getTeclado().getTiempo();
+                meto.start();
+                JOptionPane.showMessageDialog(this,"se realizo");
             }else
                 JOptionPane.showMessageDialog(this, "No se realizo");
         }
