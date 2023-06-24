@@ -6,7 +6,9 @@ package examen2p2_akeemi;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JColorChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -119,6 +121,14 @@ public class Main extends javax.swing.JFrame {
         tiempo = new javax.swing.JTextField();
         tactil = new javax.swing.JComboBox<>();
         Parte = new javax.swing.ButtonGroup();
+        Simulacion = new javax.swing.JDialog();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton15 = new javax.swing.JButton();
+        compu = new javax.swing.JComboBox<>();
+        per = new javax.swing.JComboBox<>();
+        jProgressBar1 = new javax.swing.JProgressBar();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -355,16 +365,11 @@ public class Main extends javax.swing.JFrame {
         jLabel30.setForeground(new java.awt.Color(0, 0, 0));
         jLabel30.setText("Genero");
 
-        nombre.setEnabled(false);
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActionPerformed(evt);
             }
         });
-
-        edad.setEnabled(false);
-
-        genero.setEnabled(false);
 
         jButton11.setText("Crear");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -915,6 +920,64 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jPanel7.setBackground(new java.awt.Color(0, 153, 153));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jButton15.setText("Comenzar simulacion");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(per, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(compu, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(compu, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(per, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout SimulacionLayout = new javax.swing.GroupLayout(Simulacion.getContentPane());
+        Simulacion.getContentPane().setLayout(SimulacionLayout);
+        SimulacionLayout.setHorizontalGroup(
+            SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        SimulacionLayout.setVerticalGroup(
+            SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 102));
@@ -965,6 +1028,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         jButton8.setText("Simulacion");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1399,6 +1467,56 @@ public class Main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton14ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        Simulacion.pack();
+        Simulacion.setVisible(true);
+        for (Computadora c : compus) {
+            compu.addItem(c.getNumSerie());
+        }
+        for (Tecnicos t : tecnicos) {
+            per.addItem(t.getNombre());
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        Computadora com=null;
+        Tecnicos tec=null;
+        for (Computadora compu1 : compus) {
+            if(compu1.getNumSerie().equals(compu.getSelectedItem())){
+                com=compu1;
+            }
+        }
+        for (Tecnicos c : tecnicos) {
+            if(c.getNombre().equals(per.getSelectedItem())){
+                tec=c;
+            }
+        }
+        int num=ran.nextInt(1, 10);
+        if(tec.getExito()<6){
+            if(num!=1||num!=5||num!=9){
+                
+            }else
+                JOptionPane.showMessageDialog(this, "No se realizo");
+        }
+        if(tec.getExito()>=6&&tec.getExito()<=15){
+            if(num!=2|num!=9){
+                
+            }else
+                JOptionPane.showMessageDialog(this, "No se realizo");
+        }
+        if(tec.getExito()>=16&&tec.getExito()<=30){
+            if(num!=1||num!=6){
+                
+            }
+        }
+        if(tec.getExito()>30){
+            if(num!=6){
+                
+            }else
+                JOptionPane.showMessageDialog(this, "No se realizo");
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1436,7 +1554,7 @@ public class Main extends javax.swing.JFrame {
     ArrayList<Computadora>compus=new ArrayList<>();
     ArrayList<Tecnicos>tecnicos=new ArrayList<>();
     ArrayList<Parte>componentes=new ArrayList<>();
-    
+    Random ran;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Batery;
     private javax.swing.JDialog CrearCompu;
@@ -1452,10 +1570,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup Parte;
     private javax.swing.JRadioButton Procesador;
     private javax.swing.JRadioButton RamODisco;
+    private javax.swing.JDialog Simulacion;
     private javax.swing.JRadioButton Teclado;
     private javax.swing.JTextField ano;
     private javax.swing.JComboBox<String> bateria;
     private javax.swing.JButton color;
+    private javax.swing.JComboBox<String> compu;
     private javax.swing.JComboBox<String> dico;
     private javax.swing.JTextField edad;
     private javax.swing.JComboBox<String> eliminartec;
@@ -1467,6 +1587,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1516,8 +1637,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField marcaD;
     private javax.swing.JTextField marcaP;
     private javax.swing.JTextField material;
@@ -1530,6 +1655,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField numeroserie;
     private javax.swing.JTextField numnucleos;
     private javax.swing.JComboBox<String> pantalla;
+    private javax.swing.JComboBox<String> per;
     private javax.swing.JComboBox<String> procesador;
     private javax.swing.JComboBox<String> ram;
     private javax.swing.JComboBox<String> tactil;
